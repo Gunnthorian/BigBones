@@ -16,6 +16,7 @@
 div.social-icons {
   position: relative;
   top: 7px;
+  left: 4px;
 }
 .social-icons li {
     display: inline;
@@ -83,5 +84,5 @@ div.social-icons {
     background-color: #566473;
 }
 .fa-snapchat:hover {
-    background-color: #fffc00;
+    background-color: #ffd700;
 }

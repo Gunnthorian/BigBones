@@ -54,6 +54,44 @@ a{
   height: 60px;
 }
 
+.nav-link-cont{
+  float: right;
+  margin-top: 18px;
+  margin-right: 8px;
+}
+
+.nav-scrolled > .nav-bar > .nav-link-cont{
+  position: relative;
+  top: -10px;
+  transition: top .1s ease;
+}
+
+.nav-unscrolled > .nav-bar > .nav-link-cont{
+  position: relative;
+  top: 0px;
+  transition: top .1s ease;
+}
+
+.nav-link{
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  float: right;
+  color: #ED3636;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.nav-link:hover{
+  filter: opacity(80%);
+  transition: 0.2s;
+}
+
+.nav-starred{
+  background-color: #ED3636;
+  border-radius: 4px;
+  color: #24292e;
+}
+
 .showcase-cont{
   position: relative;
   width: 100%;
@@ -65,19 +103,26 @@ a{
 .showcase-box{
   position: relative;
   width: 100%;
-  height:100%;
+  height: 100%;
   max-width: 960px;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
 .showcase-box > img:first-child{
   position: absolute;
-  left: calc(50% - 400px);
-  top: 0px;
-  height: 100%;
+  left: 0px;
+  height: 100vw;
+  max-height: 800px;
+  top: calc(-1 * ( 50vw - 400px ));
   margin: 0 auto;
   display: block;
+}
+/*THESE TWO ARE TIED TOGETHER ^ v */
+@media (min-width: 801px) {
+  .showcase-box > img:first-child{
+    left: calc(50vw - 400px);
+    top: 0px;
+  }
 }
 
 @media (min-width: 400px) {
@@ -108,21 +153,12 @@ a{
   box-sizing: border-box;
 }
 
-.showcase-box > img:first-child{
-  position: absolute;
-  left: calc(50% - 400px);
-  top: 0px;
-  height: 100%;
-  margin: 0 auto;
-  display: block;
-}
-
 @media (min-width: 400px) {
-  .showcase-box{
+  .footer-bar{
     width: 100%;}
 }
 
 @media (min-width: 550px) {
-  .showcase-box{
+  .footer-bar{
     width: 80%; }
 }
