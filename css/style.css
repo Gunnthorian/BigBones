@@ -21,12 +21,7 @@ a{
   box-sizing: border-box;
 }
 
-@media (min-width: 400px) {
-  .nav-bar{
-    width: 100%;}
-}
-
-@media (min-width: 550px) {
+@media (min-width: 700px) {
   .nav-bar{
     width: 80%; }
 }
@@ -126,12 +121,7 @@ a{
   }
 }
 
-@media (min-width: 400px) {
-  .showcase-box{
-    width: 100%;}
-}
-
-@media (min-width: 550px) {
+@media (min-width: 700px) {
   .showcase-box{
     width: 80%; }
 }
@@ -155,12 +145,31 @@ a{
   box-sizing: border-box;
 }
 
-@media (min-width: 400px) {
-  .footer-bar{
-    width: 100%;}
-}
-
-@media (min-width: 550px) {
+@media (min-width: 700px) {
   .footer-bar{
     width: 80%; }
+}
+
+/* Styling for images or img's that are located inplace of a column */
+
+.column.full-center-img,
+.columns.full-center-img,
+.column.full-top-img,
+.columns.full-top-img{
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.column.full-center-img,
+.columns.full-center-img{
+  background-position: center;
+  background-size: cover;
+}
+
+.column.full-top-img,
+.columns.full-top-img{
+  background-position: center;
+  background-size: cover;
 }
