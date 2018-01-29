@@ -25,7 +25,6 @@ a{
   height: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  align-content: center;
 }
 
 @media (min-width: 700px) {
@@ -38,6 +37,7 @@ a{
   width: 80px;
   top: 0px;
   transition: top .1s ease;
+  margin: 0px auto;
 }
 
 .nav-scrolled > .nav-bar > a > img{
