@@ -12,7 +12,13 @@ function documentOnResize(){
 
 function documentOnLoad(){
   divImgEqualToParent()
+  setupAnimateElLoads()
 }
+
+window.onscroll = function(){
+  animateElLoads()
+  navAnimation()
+};
 
 function divImgEqualToParent(){
   var list = document.querySelectorAll("div[img-src]");
@@ -37,18 +43,63 @@ function divImgEqualToParent(){
     }
     list[i].style.height = largest_sibling + "px";
     // Handles giving the element a background specified by the attr `img-src`
-    if()
-    let url = list[i].getAttribute('img-src');
-    list[i].style.backgroundImage = "url('" + url + "')";
+    list[i].style.backgroundImage = "url('" + list[i].getAttribute('img-src') + "')";
+    let body_elem = document.getElementsByTagName('body')[0];
+    console.log(body_elem.clientWidth);
+    if(body_elem.clientWidth < 700 && list[i].getAttribute('img-src-hori') != null){
+      list[i].style.backgroundImage = "url('" + list[i].getAttribute('img-src-hori') + "')";
+    }
   }
 }
 
-window.onscroll = function(){
+function setupAnimateElLoads(){
+  var list = document.querySelectorAll("div[onload-rise]");
+  for (var i = 0; i < list.length; i++) {
+    list[i].style.transform = "translateY(50px)"
+    list[i].style.opacity = "0"
+  }
+}
+
+function animateElLoads(){
+  var list = document.querySelectorAll("div[onload-rise]");
+  for (var i = 0; i < list.length; i++) {
+    if(isViewportVisible(list[i])){
+      list[i].style.transform = "translateY(0)"
+      list[i].style.opacity = "1"
+    }
+  }
+}
+
+function navAnimation(){
   var nav_bar = document.getElementById('navigation-id');
-    if (document.body.scrollTop > 0 ) {
-        nav_bar.className = "nav-cont nav-scrolled";
+  if (document.body.scrollTop > 0 ) {
+      nav_bar.className = "nav-cont nav-scrolled";
+  }
+  else {
+      nav_bar.className = "nav-cont nav-unscrolled";
+  }
+}
+
+function getViewportSize(w) {
+    var w = w || window;
+    if(w.innerWidth != null) return {w:w.innerWidth, h:w.innerHeight};
+    var d = w.document;
+    if (document.compatMode == "CSS1Compat") {
+        return {
+            w: d.documentElement.clientWidth,
+            h: d.documentElement.clientHeight
+        };
     }
-    else {
-        nav_bar.className = "nav-cont nav-unscrolled";
-    }
-};
+    return { w: d.body.clientWidth, h: d.body.clientWidth };
+}
+
+function isViewportVisible(e) {
+    var box = e.getBoundingClientRect();
+    var height = box.height || (box.bottom - box.top);
+    var width = box.width || (box.right - box.left);
+    var viewport = getViewportSize();
+    if(!height || !width) return false;
+    if((box.top + box.height/1.5) > viewport.h || box.bottom < 0) return false;
+    if(box.right < 0 || box.left > viewport.w) return false;
+    return true;
+}
