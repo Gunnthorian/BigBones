@@ -57,6 +57,16 @@ a{
   transform: scale(0.9);
 }
 
+/* animate the nav logo */
+@keyframes displayNavLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .nav-scrolled{
   height: 60px;
 }
