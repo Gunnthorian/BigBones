@@ -38,6 +38,11 @@ a{
   top: 0px;
   transition: top .1s ease;
   margin: 0px auto;
+  animation: .3s cubic-bezier(.01,0,.1,1) 0s 1 displayNavLogo;
+}
+
+.nav-bar > a > .support--page{
+  animation: .3s cubic-bezier(.01,0,.1,1) 0s 1 displayNavLogo;
 }
 
 .nav-scrolled > .nav-bar > a > img{
