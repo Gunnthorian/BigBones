@@ -42,7 +42,11 @@
   </div>
   <div class="showcase-cont">
     <div class="showcase-box">
-      <img src="images/GB_Trident_gold_animate_1_5.gif" draggable="false"/>
+      <img id="showcase-gif" src="images/GB_Trident_gold_animate_1_5.gif" draggable="false"/>
+      <script>
+        var img = document.getElementById('showcase-gif');
+        img.src = "images/GB_Trident_gold_animate_1_5.gif"+"?a="+Math.random();
+      </script>
     </div>
   </div>
   <div id="intro" class="container-background">
