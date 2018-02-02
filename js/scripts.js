@@ -22,31 +22,47 @@ window.onscroll = function(){
 
 function divImgEqualToParent(){
   var list = document.querySelectorAll("div[img-src]");
+  let body_elem = document.getElementsByTagName('body')[0];
 
   for (var i = 0; i < list.length; i++) {
+    var u = list[i].getAttribute('img-src');
+    var img = new Image;
+    img.src = u;
+    var ratio = img.height/img.width;
+    var alt_u = list[i].getAttribute('img-src-hori');
+    var alt_img = new Image;
+    alt_img.src = alt_u;
+    var alt_ratio = alt_img.height/alt_img.width;
     // Handles the height of the image's element
-    let siblings = list[i].parentElement.getElementsByTagName('div');
-    let largest_sibling = 0;
-    for (var j = 0; j < siblings.length; j++){
-      if(siblings[j].hasAttribute("img-src") == false){
-        if(siblings[j].clientHeight > largest_sibling){
-          largest_sibling = siblings[j].clientHeight;
+    if(body_elem.clientWidth >= mobile_condense){
+      let siblings = list[i].parentElement.getElementsByTagName('div');
+      let largest_sibling = 0;
+      for (var j = 0; j < siblings.length; j++){
+        if(siblings[j].hasAttribute("img-src") == false){
+          if(siblings[j].clientHeight > largest_sibling){
+            largest_sibling = siblings[j].clientHeight;
+          }
         }
       }
-    }
-    if(largest_sibling == 0){
-      if(list[i].getAttribute('img-height') != null){
-        largest_sibling = list[i].getAttribute('img-height');
+      if(largest_sibling == 0){
+        if(list[i].getAttribute('img-height') != null){
+          largest_sibling = list[i].getAttribute('img-height');
+        }else{
+          largest_sibling = img_src_fallback_height;
+        }
+      }
+      list[i].style.height = largest_sibling + "px";
+    }else{
+      if(list[i].hasAttribute("img-height")){
+        list[i].style.height = list[i].getAttribute("img-height") + "px";
       }else{
-        largest_sibling = img_src_fallback_height;
+        list[i].style.height = (body_elem.clientWidth * alt_ratio) + "px";
       }
     }
-    list[i].style.height = largest_sibling + "px";
+
     // Handles giving the element a background specified by the attr `img-src`
     list[i].style.backgroundImage = "url('" + list[i].getAttribute('img-src') + "')";
-    let body_elem = document.getElementsByTagName('body')[0];
-    console.log(body_elem.clientWidth);
-    if(body_elem.clientWidth < 700 && list[i].getAttribute('img-src-hori') != null){
+    if(body_elem.clientWidth < mobile_condense && list[i].getAttribute('img-src-hori') != null){
       list[i].style.backgroundImage = "url('" + list[i].getAttribute('img-src-hori') + "')";
     }
   }
