@@ -34,8 +34,9 @@ function divImgEqualToParent(){
     alt_img.src = alt_u;
     var alt_ratio = alt_img.height/alt_img.width;
     // Handles the height of the image's element
-    if(body_elem.clientWidth >= mobile_condense){
-      let siblings = list[i].parentElement.getElementsByTagName('div');
+    var parentElem = list[i].parentElement;
+    if(body_elem.clientWidth >= mobile_condense || list[i].hasAttribute('mobile')){
+      let siblings = parentElem.getElementsByTagName('div');
       let largest_sibling = 0;
       for (var j = 0; j < siblings.length; j++){
         if(siblings[j].hasAttribute("img-src") == false){
@@ -115,7 +116,7 @@ function isViewportVisible(e) {
     var width = box.width || (box.right - box.left);
     var viewport = getViewportSize();
     if(!height || !width) return false;
-    if((box.top + box.height/1.5) > viewport.h || box.bottom < 0) return false;
+    if((box.top + box.height/4) > viewport.h || box.bottom < 0) return false;
     if(box.right < 0 || box.left > viewport.w) return false;
     return true;
 }

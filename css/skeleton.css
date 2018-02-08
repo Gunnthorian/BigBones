@@ -112,6 +112,23 @@
 
 }
 
+[mobile="1"],[mobile="one"]       { width: 4.66666666667%; }
+[mobile="2"],[mobile="two"]       { width: 13.3333333333%; }
+[mobile="3"],[mobile="three"]     { width: 22%;            }
+[mobile="4"],[mobile="four"]      { width: 30.6666666667%; }
+[mobile="5"],[mobile="five"]      { width: 39.3333333333%; }
+[mobile="6"],[mobile="six"]       { width: 48%;            }
+[mobile="7"],[mobile="seven"]     { width: 56.6666666667%; }
+[mobile="8"],[mobile="eight"]     { width: 65.3333333333%; }
+[mobile="9"],[mobile="nine"]      { width: 74.0%;          }
+[mobile="10"],[mobile="ten"]      { width: 82.6666666667%; }
+[mobile="11"],[mobile="eleven"]   { width: 91.3333333333%; }
+[mobile="12"],[mobile="twelve"]   { width: 100%; margin-left: 0; }
+
+[mobile="one-third"]              { width: 30.6666666667%; }
+[mobile="two-third"]              { width: 65.3333333333%; }
+
+[mobile="one-half"]               { width: 48%; }
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
