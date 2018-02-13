@@ -11,12 +11,6 @@ a{
   box-sizing: border-box;
   background-color: #24292e;
   transition: height .1s ease;
-  user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 .nav-bar{
   position: relative;
@@ -167,12 +161,6 @@ a{
   box-sizing: border-box;
   background-color: #51788B;
   overflow-y: hidden;
-  user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 .showcase-box{
   position: relative;
@@ -310,4 +298,81 @@ anchor {
   height: 0px;
   width: 100px;
   top: -100px;
+}
+
+/* anchor::before {
+  content: "<div>test</div>";
+  display: block;
+  position: relative;
+  top: 102px;
+  right: 100px;
+  padding-top: 13px;
+  height: 37px;
+  width: 50px;
+  background-color: red;
+}
+
+anchor:hover::before {
+  vertical-align: middle;
+  content: "#" attr(id);
+  display: inline-block;
+  position: relative;
+  padding-top: 13px;
+  right: 100px;
+  height: 37px;
+  width: auto;
+  background-color: red;
+} */
+
+anchor > div {
+  display: block;
+  position: relative;
+  top: 102px;
+  right: 150px;
+  padding-top: 13px;
+  height: 37px;
+  width: auto;
+  overflow: hidden;
+}
+
+anchor > div > div {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  padding-top: 13px;
+  height: 37px;
+  transition: all .2s;
+  text-align: right;
+}
+
+anchor > div > div:hover {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-top: 13px;
+  height: 37px;
+  width: 100px;
+}
+anchor > div > div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  padding-top: 13px;
+  padding-left: 13px;
+  height: 37px;
+  width: 50px;
+  transition: all .2s;
+  background-image: url("../images/anchor.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+anchor > div > div:hover::before {
+  display: block;
+  position: absolute;
+  top: -50px;
 }

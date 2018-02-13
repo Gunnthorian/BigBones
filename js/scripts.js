@@ -13,6 +13,7 @@ function documentOnResize(){
 function documentOnLoad(){
   divImgEqualToParent()
   setupAnimateElLoads()
+  setupAnchors()
 }
 
 window.onscroll = function(){
@@ -84,6 +85,19 @@ function animateElLoads(){
       list[i].style.transform = "translateY(0)"
       list[i].style.opacity = "1"
     }
+  }
+}
+
+function setupAnchors(){
+  var anchors = document.getElementsByTagName("anchor");
+  for (var i = 0; i < anchors.length; i++){
+    var anchor_id = anchors[i].getAttribute("id");
+    var child = document.createElement("div");
+    var child_a = document.createElement("div");
+    child_a.setAttribute("anchor_id", anchor_id);
+    child_a.innerHTML = "#"+anchor_id;
+    child.appendChild(child_a);
+    anchors[i].appendChild(child);
   }
 }
 
