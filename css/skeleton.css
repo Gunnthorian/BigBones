@@ -59,24 +59,68 @@
   .columns:first-child {
     margin-left: 0; }
 
-  .one.column,
-  .one.columns                    { width: 4.66666666667%; }
+  ._1.column,
+  ._1.columns,
+  .one.columns,
+  .one.column                     { width: 4.66666666667%; }
+  ._2.column,
+  ._2.columns,
+  .two.column,
   .two.columns                    { width: 13.3333333333%; }
+  ._3.column,
+  ._3.columns,
+  .three.column,
   .three.columns                  { width: 22%;            }
+  ._4.column,
+  ._4.columns,
+  .four.column,
   .four.columns                   { width: 30.6666666667%; }
+  ._5.column,
+  ._5.columns,
+  .five.column,
   .five.columns                   { width: 39.3333333333%; }
+  ._6.column,
+  ._6.columns,
+  .six.column,
   .six.columns                    { width: 48%;            }
+  ._7.column,
+  ._7.columns,
+  .seven.column,
   .seven.columns                  { width: 56.6666666667%; }
+  ._8.column,
+  ._8.columns,
+  .eight.column,
   .eight.columns                  { width: 65.3333333333%; }
+  ._9.column,
+  ._9.columns,
+  .nine.column,
   .nine.columns                   { width: 74.0%;          }
+  ._10.column,
+  ._10.columns,
+  .ten.column,
   .ten.columns                    { width: 82.6666666667%; }
+  ._11.column,
+  ._11.columns,
+  .eleven.column,
   .eleven.columns                 { width: 91.3333333333%; }
+  ._12.column,
+  ._12.columns,
+  .twelve.column,
   .twelve.columns                 { width: 100%; margin-left: 0; }
 
-  .one-third.column               { width: 30.6666666667%; }
-  .two-thirds.column              { width: 65.3333333333%; }
+  ._1_3.column,
+  ._1_3.columns,
+  .one-third.column,
+  .one-third.columns              { width: 30.6666666667%; }
+  ._2_3.column,
+  ._2_3.columns,
+  .two-thirds.column,
+  .two-thirds.columns             { width: 65.3333333333%; }
 
-  .one-half.column                { width: 48%; }
+  ._1_2.column,
+  ._1_2.columns,
+  .one-half.column,
+  .one-half.columns               { width: 48%; }
 
   /* Offsets */
   .offset-by-one.column,

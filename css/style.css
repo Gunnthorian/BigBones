@@ -1,3 +1,10 @@
+/* VARIABLES*/
+:root {
+  --main-text-color: #FDBD12;
+  --main-text-color-shade: #373C41;
+  --main-text: #24292e;
+}
+
 a{
   color: #008CFF;
 }
@@ -103,7 +110,7 @@ a{
   padding: 5px 10px;
   border-radius: 5px;
   float: right;
-  color: #ED3636;
+  color: var(--main-text-color);
   font-size: 1.3em;
   cursor: pointer;
   transition: 0.2s;
@@ -128,7 +135,7 @@ a{
 }
 
 .nav-starred{
-  background-color: #ED3636;
+  background-color: var(--main-text-color);
   border-radius: 4px;
   color: #24292e;
 }
@@ -144,13 +151,13 @@ a{
   padding: 4px 10px 1px 10px;
   border-radius: 0px 0px 5px 5px;
   height: 20px;
-  color: #ED3636;
+  color: var(--main-text-color);
   background-color: #373C41;
 }
 
 .nav-link.nav-starred:hover:after{
   color: #24292e;
-  background-color: #C22D2D;
+  background-color: #F8991E;
 }
 
 .showcase-cont{
@@ -375,4 +382,23 @@ anchor > div > div:hover::before {
   display: block;
   position: absolute;
   top: -50px;
+}
+
+[push-top-away="0"]{
+  padding-top: 0px;
+}
+[push-top-away="1"]{
+  padding-top: 50px;
+}
+[push-top-away="2"]{
+  padding-top: 100px;
+}
+[push-top-away="3"]{
+  padding-top: 150px;
+}
+[push-top-away="4"]{
+  padding-top: 200px;
+}
+[push-top-away="5"]{
+  padding-top: 250px;
 }

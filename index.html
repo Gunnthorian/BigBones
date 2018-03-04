@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Gunnar Bjorkman</title>
+  <title>Big Bones</title>
   <meta name="description" content="Portfolio/Junk Drawer">
   <meta name="author" content="Gunnar Bjorkman">
   <!-- Mobile Specific Metas
@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="./css/skeleton.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/social-icons.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="./js/scripts.js"></script>
@@ -33,41 +34,98 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div id="navigation-id" class="nav-cont">
     <div class="nav-bar">
-      <a href="http://dev.gunn.in"><img alignment="middle" src="./images/GB_gold.png" draggable="false"/></a>
+      <a href="http://bigbones.gunn.in"><img alignment="middle" src="./images/bb-bone-comp.png" draggable="false"/></a>
       <div class="nav-link-cont">
-        <a href="http://dev.gunn.in/support"><div url="/support" class="nav-link nav-starred">Support Me</div></a>
-        <a href="#intro"><div url="#projects" class="nav-link">Projects</div></a>
-        <a href="#aboutme"><div url="#about" class="nav-link">About</div></a>
+        <a href=""><div url="/pop-link" class="nav-link nav-starred">Pop Link</div></a>
+        <a href="#grid"><div url="#grid" class="nav-link">Grid</div></a>
+        <a href=""><div url="/relative link" class="nav-link">Example Link</div></a>
       </div>
     </div>
   </div>
-  <div class="showcase-cont">
-    <div class="showcase-box">
-      <img id="showcase-gif" src="" draggable="false"/>
-      <script>document.getElementById('showcase-gif').src="images/GB_Trident_gold_animate_1_5.gif?a="+Math.random()</script>
-    </div>
-  </div>
-  <div class="container-background">
+  <div class="container-background" push-top-away="2">
     <div class="container">
       <div class="row">
         <div class="one-half column">
-          <h4>Basic Pagea</h4>
-          <p>This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the <a href="http://www.getskeleton.com">Skeleton
-            documentation</a>.</p>
+          <h1>BIG BONES</h1>
+          <h4>Big Bones is a fancy but simple boilerplate for static websites</h4>
+          <h5 style="color:grey;"><i class="far fa-code-branch"></i> This project is a fork of <a href="https://github.com/dhg/Skeleton" style="color:grey;">getskeleton</a></h5>
         </div>
         <div img-src="./images/flat_macbook.png" img-src-hori="./images/flat_iphonex.png" onload-rise="" class="one-half column fit-center-img">
         </div>
         <div spacer="line"></div>
       </div>
-      <anchor id="aboutme"></anchor>
+      <div class="row">
+        <div class="_12 column">
+          <h1>Features & Syntax</h1>
+        </div>
+      </div>
+      <anchor id="grid"></anchor>
+      <div class="row">
+        <div class="_12 column">
+          <h4>Grid System</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="_1 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          one
+        </div>
+        <div class="_11 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          eleven
+        </div>
+      </div>
+      <div class="row">
+        <div class="_2 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          two
+        </div>
+        <div class="_10 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          ten
+        </div>
+      </div>
+      <div class="row">
+        <div class="_3 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          three
+        </div>
+        <div class="_9 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          nine
+        </div>
+      </div>
+      <div class="row">
+        <div class="_4 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          four, one-third
+        </div>
+        <div class="_8 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          eight, two-thirds
+        </div>
+      </div>
+      <div class="row">
+        <div class="_5 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          five
+        </div>
+        <div class="_7 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          seven
+        </div>
+      </div>
+      <div class="row">
+        <div class="_6 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          six, one-half
+        </div>
+        <div class="_6 column" style="background-color:lightgrey;text-align:center;border-radius:5px">
+          six, one-half
+        </div>
+      </div>
+      <div class="row">
+        <div class="_6 column">
+          Use any of the following styles to define the size of a column:<br>
+        </div>
+        <div class="_6 column">
+          <code style="display:block;width:97%;">
+            &lt;div class="_5 column"&gt;<br>
+            &lt;div class="_5 columns"&gt;<br>
+            &lt;div class="five column"&gt;<br>
+            &lt;div class="five columns"&gt;<br>
+          </code>
+        </div>
+      </div>
       <div class="row">
         <div class="twelve column">
           <h1>About me</h1>
@@ -78,11 +136,11 @@
       </div>
       <div class="row">
         <div class="one-third column" style="text-align:right" mobile="7">
-          <h4>Software I Use</h4>
-          <h>Logos, Designs, & Animations</h>
+          <h4>Features</h4>
+          <h>Layout:</h>
           <ul>
-          <li>After Effects</li>
-          <li>Photoshop</li>
+          <li>Grid sizing</li>
+          <li>Custom mobile grid sizing</li>
           <li>Illustrator</li>
           </ul>
           <h>3D modeling & CNC tool pathing</h>
@@ -100,35 +158,6 @@
         </div>
       </div>
     </div>
-  <div class="container-background">
-    <div class="container cont-alt">
-      <div class="row">
-        <div class="one-third column">
-          <h4>Basic Page</h4>
-          <p>This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the. This index.html page is a placeholder with the CSS, font and favicon.
-            It's just waiting for you to add some content! If you need some help
-            hit up the <a href="http://www.getskeleton.com">Skeleton
-            documentation</a>.</p>
-        </div>
-        <div img-src="./images/test_img.png" img-src-hori="./images/test_img.png" onload-rise="" class="two-thirds column fit-center-img">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-cont">
-    <div class="footer-bar">
-      <div class="social-icons">
-        <li><a href="" class="social-icon"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="" class="social-icon"><i class="fa fa-snapchat"></i></a></li>
-      </div>
-    </div>
-  </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
